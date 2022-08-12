@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:3.0.2
+    parallelism: 30
     steps:
       - checkout
       - run: echo $BRAINTREE_ENV
