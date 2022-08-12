@@ -9,4 +9,6 @@ jobs:
       - run:
           name: print env
           command: |
-              /usr/bin/env ruby -e "puts ENV['BRAINTREE_ENV']"
+              ruby \<<EOD
+                puts ENV['BRAINTREE_ENV']
+              EOD
