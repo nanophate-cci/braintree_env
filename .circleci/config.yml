@@ -12,4 +12,5 @@ jobs:
           command: |
               ruby \<<EOD
                 puts ENV['BRAINTREE_ENV']
+                puts ENV['BRAINTREE_ENV'].to_sym
               EOD
