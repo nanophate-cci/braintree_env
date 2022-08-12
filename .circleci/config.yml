@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/ruby:3.0.2
+    steps:
+      - checkout
+      - run: echo $BRAINTREE_ENV
+      - run:
+          name: print env
+          command: |
+              /usr/bin/env ruby -e "puts ENV['BRAINTREE_ENV']"
