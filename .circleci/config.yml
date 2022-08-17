@@ -14,3 +14,6 @@ jobs:
                 puts ENV['BRAINTREE_ENV']
                 puts ENV['BRAINTREE_ENV'].to_sym
               EOD
+      - run: BRAINTREE_ENVIRONMENT=$BRAINTREE_ENV ruby -e "puts %[hello from process #{ENV['BRAINTREE_ENVIRONMENT'].to_sym}]"
+              
+              
